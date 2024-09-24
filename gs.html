@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Score Calculator</title>
+    <link rel="stylesheet" href="gs.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">Myplan8</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="greenScore.html" class="active">Green Score</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h2>Calculate Your Green Score</h2>
+        <p>The Green Score is a reflection of your eco-conscious lifestyle. Unlike traditional carbon footprint calculators that primarily focus on negative impacts, the Green Score considers both positive actions and their impact on the environment. For
+            every eco-friendly action you take, you earn Green Credits that contribute to your Green Score, empowering you to understand your impact and strive for a sustainable future.</p>
+
+        <h3>How is the Green Score Calculated?</h3>
+        <p>The Green Score is derived from a comprehensive assessment of your lifestyle. Here's how it works:</p>
+        <div class="card-container">
+            <div class="card">
+                <p>Positive Actions: Actions such as recycling, supporting eco-friendly brands, and conserving water add positive points to your score.</p>
+            </div>
+            <div class="card">
+                <p>Negative Actions: Activities with higher carbon footprints, like excessive energy usage, will deduct points.</p>
+            </div>
+            <div class="card">
+                <p>Carbon Offsetting: Engage with offsetting projects to counterbalance your carbon emissions and boost your score.</p>
+            </div>
+        </div>
+
+        <!-- Green Score Form -->
+        <form id="green-score-form" onsubmit="calculateGreenScore(event)">
+            <div class="form-group card">
+                <label for="energyUsage">Energy Usage (kWh per month):</label>
+                <input type="number" id="energyUsage" required>
+            </div>
+            <div class="form-group card">
+                <label for="wasteProduction">Waste Production (kg per month):</label>
+                <input type="number" id="wasteProduction" required>
+            </div>
+            <div class="form-group card">
+                <label for="waterConservation">Water Conservation (liters per month):</label>
+                <input type="number" id="waterConservation" required>
+            </div>
+            <button type="submit" class="btn">Calculate Green Score</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <!-- Separate Calculator Section -->
+        <div class="calculator">
+            <h3>Quick Eco Calculator</h3>
+            <input type="number" id="quickEnergy" placeholder="Energy (kWh/month)" required>
+            <input type="number" id="quickWaste" placeholder="Waste (kg/month)" required>
+            <input type="number" id="quickWater" placeholder="Water (liters/month)" required>
+            <button onclick="quickCalculate()">Calculate Quick Score</button>
+            <div id="quickResult"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">Stay Connected</div>
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2024 Myplan8 Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gs.js"></script>
+</body>
+
+</html>
